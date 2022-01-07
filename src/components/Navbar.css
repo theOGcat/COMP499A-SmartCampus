@@ -3,16 +3,9 @@
   margin: 0 auto;
   padding: 0 1.2rem;
 }
-header {
-  min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../images/1.jpg) center/cover no-repeat fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-}
+
 .navbar {
-  background: rgba(0, 0, 0, 0.6);
+  background: black;
   padding: 2rem;
 }
 .navbar-brand {
