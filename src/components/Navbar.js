@@ -12,8 +12,8 @@ function Navbar() {
                     <Link to ="/" className="navbar-brand">University of Windsor </Link>
                 <div className='navbar-nav'>
                         <div>
-                        <Link to ="/" className="nav-links">Home</Link>
-                        <Link to ="/" className="nav-links">Page1</Link>
+                        <Link to ="/HomeContent" className="nav-links">Home</Link>
+                        <Link to ="/" className="nav-links">Course</Link>
                         <Link to ="/" className="nav-links">Blog</Link>
                         <Link to ="/About" className="nav-links">About</Link>
                         <Link to ="/" className="nav-links">Login</Link>
