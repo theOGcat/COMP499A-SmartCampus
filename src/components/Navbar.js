@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { ReactDOM } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'
+
 
 
 function Navbar() {
     return (
-        <header>
+       
             <nav className='navbar'>
                 <div className='container'>
                     <Link to ="/" className="navbar-brand">University of Windsor </Link>
@@ -21,7 +21,7 @@ function Navbar() {
                 </div>
                 </div>
             </nav>
-        </header>
+        
     );
 }
 
