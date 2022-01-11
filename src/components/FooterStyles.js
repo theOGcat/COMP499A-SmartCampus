@@ -60,6 +60,3 @@ color: #fff;
 margin-bottom: 10px;
 font-weight: bold;
 `;
-
-
-
