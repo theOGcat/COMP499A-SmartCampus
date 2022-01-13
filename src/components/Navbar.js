@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { ReactDOM } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+//import { ReactDOM } from 'react';
+//import { Link } from 'react-router-dom';
 import {
     Nav,
     NavLink,
@@ -16,18 +16,18 @@ import {
           <>
             <Nav>
               <NavLink to='/'>
-                  Home
+                  Univerisity of Windsor
               </NavLink>
               <Bars />
               <NavMenu>
-                <NavLink to='/about' activeStyle>
+                <NavLink to='/About' activeStyle>
                   About
                 </NavLink>
                 <NavLink to='/services' activeStyle>
-                  Services
+                  Courses
                 </NavLink>
                 <NavLink to='/contact-us' activeStyle>
-                  Contact Us
+                  Blog
                 </NavLink>
                 <NavLink to='/sign-up' activeStyle>
                   Sign Up
