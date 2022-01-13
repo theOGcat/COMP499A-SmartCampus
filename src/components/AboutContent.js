@@ -47,6 +47,9 @@ The second phase of the downtown campus includes the School of Creative Arts, lo
         The University of Windsor is located next to North America’s busiest international border crossing and looks out on one of Canada’s most beautiful waterfronts on the Detroit River. Windsor is also Canada’s southernmost city and has some of the country’s best weather.
       </Text>
 
+
+
+        
         </div>
     </div>
     )

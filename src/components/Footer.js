@@ -1,58 +1,51 @@
 import React from "react";
-import {
-Box,
-Container,
-Row,
-Column,
-FooterLink,
-Heading,
-} from "./FooterStyles.js";
+import "./FooterStyles.css";
 
-const Footer = () => {
-return (
-	<Box>
-	<h1 style={{ color: "white",
-				textAlign: "center",
-				marginTop: "-20px" }}>
-		University of Windsor
-	</h1>
-	<Container>
-		<Row>
-		<Column>
-			<Heading>About Us</Heading>
-			<FooterLink href="#">Team</FooterLink>
-			<FooterLink href="#">Vision</FooterLink>
-		</Column>
-		<Column>
-			<Heading>Services</Heading>
-
-			<FooterLink href="#">Teaching</FooterLink>
-		</Column>
-		<Column>
-			<Heading>Contact Us</Heading>
-            <FooterLink href="#">Lorry Wei</FooterLink>
-		</Column>
-		<Column>
-			<Heading>Social Media</Heading>
-			
-			<FooterLink href="#">
-			<i className="fab fa-twitter">
-				<span style={{ marginLeft: "10px" }}>
-				Twitter
-				</span>
-			</i>
-			</FooterLink>
-			<FooterLink href="#">
-			<i className="fab fa-youtube">
-				<span style={{ marginLeft: "10px" }}>
-				Youtube
-				</span>
-			</i>
-			</FooterLink>
-		</Column>
-		</Row>
-	</Container>
-	</Box>
+const Footer = () => (
+  <div className="footer">
+    <p1>This is some content in sticky footer</p1>
+	<div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">1</a></li>
+  	 				<li><a href="#">2</a></li>
+  	 				<li><a href="#">3</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="#">1</a></li>
+  	 				<li><a href="#">2</a></li>
+  	 				<li><a href="#">3</a></li>
+  	 				<li><a href="#">4</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>不知道放什么</h4>
+  	 			<ul>
+  	 				<li><a href="#">1</a></li>
+  	 				<li><a href="#">2</a></li>
+  	 				<li><a href="#">3</a></li>
+  	 				<li><a href="#">4</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </div>
 );
-};
+
 export default Footer;
