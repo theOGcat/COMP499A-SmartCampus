@@ -12,7 +12,7 @@ const Footer = () => (
   	 				<li><a href="#">about us</a></li>
   	 				<li><a href="#">1</a></li>
   	 				<li><a href="#">2</a></li>
-  	 				<li><a href="#">3</a></li>
+  	 				
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
@@ -21,8 +21,7 @@ const Footer = () => (
   	 				<li><a href="#">FAQ</a></li>
   	 				<li><a href="#">1</a></li>
   	 				<li><a href="#">2</a></li>
-  	 				<li><a href="#">3</a></li>
-  	 				<li><a href="#">4</a></li>
+  	 				
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
@@ -30,8 +29,7 @@ const Footer = () => (
   	 			<ul>
   	 				<li><a href="#">1</a></li>
   	 				<li><a href="#">2</a></li>
-  	 				<li><a href="#">3</a></li>
-  	 				<li><a href="#">4</a></li>
+  	 				
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
@@ -40,7 +38,7 @@ const Footer = () => (
   	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
   	 				<a href="#"><i class="fab fa-twitter"></i></a>
   	 				<a href="#"><i class="fab fa-instagram"></i></a>
-  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 				
   	 			</div>
   	 		</div>
   	 	</div>
