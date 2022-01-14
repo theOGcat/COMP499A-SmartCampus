@@ -4,8 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-
-
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -34,7 +38,15 @@ const useStyles = makeStyles((theme) => ({
 
 
       blogsContainer: {
-        paddingTop: theme.spacing(3)
+        paddingTop: theme.spacing(3),
+        paddingBottom: theme.spacing(50)
+      },
+
+
+      cardActions: {
+        display: "flex",
+        margin: "0 10px",
+        justifyContent: "space-between"
       },
 
 }));
@@ -56,8 +68,60 @@ function HomeContent() {
           Articles
         </Typography>
 
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6} md={4}>
+            <Card className={classes.card}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image="https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    React useContext
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                    across all continents except Antarctica
 
 
+
+
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              
+            </Card>
+          </Grid>
+          </Grid>
+        <Typography  >It’s a digital world and with this degree, you will have the flexibility to chart your own career path in almost any industry. We offer hands-on learning opportunities and support as you learn computer languages, operation systems, and the mathematics behind computation. University degree holders from another subject area can fast track through this program. This excellent career prep has helped all of our grads find jobs in their chosen fields within two years. UWindsor Computer Science program is tied for first in Ontario university employment rates.
+
+Sample Courses:Introduction to Algorithms and Programming, System Programming, Computer Architecture I: Digital Design, Database Management Systems, Web Information Systems Development
+
+Career Tracks: Web developer, software developer, computer programmer, IT manager, video game developer, graduate studies
+
+ADMISSION REQUIREMENTS FOR APPLICANTS IN CANADA
+Course Requirements: Advanced Functions/MHF4U. English/ENG4U.
+Strongly Recommended: Calculus & Vectors/MCV4U
+Minimum Average: 70% (70% average of math courses)
+Minimum Average (Co-op): 75% (Co-op Programs: 75% + 70% average in all attempted math courses, excluding Data Management/MDM4U)
+Mean Average (Entering Fall 2019): 82%
+
+Learn more about Course EquivalenciesIt’s a digital world and with this degree, you will have the flexibility to chart your own career path in almost any industry. We offer hands-on learning opportunities and support as you learn computer languages, operation systems, and the mathematics behind computation. University degree holders from another subject area can fast track through this program. This excellent career prep has helped all of our grads find jobs in their chosen fields within two years. UWindsor Computer Science program is tied for first in Ontario university employment rates.
+
+Sample Courses:Introduction to Algorithms and Programming, System Programming, Computer Architecture I: Digital Design, Database Management Systems, Web Information Systems Development
+
+Career Tracks: Web developer, software developer, computer programmer, IT manager, video game developer, graduate studies
+
+ADMISSION REQUIREMENTS FOR APPLICANTS IN CANADA
+Course Requirements: Advanced Functions/MHF4U. English/ENG4U.
+Strongly Recommended: Calculus & Vectors/MCV4U
+Minimum Average: 70% (70% average of math courses)
+Minimum Average (Co-op): 75% (Co-op Programs: 75% + 70% average in all attempted math courses, excluding Data Management/MDM4U)
+Mean Average (Entering Fall 2019): 82%
+
+</Typography>
       </Container>
         </div>
 
