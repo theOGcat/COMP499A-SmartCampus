@@ -10,8 +10,7 @@ const Footer = () => (
   	 			<h4>company</h4>
   	 			<ul>
   	 				<li><a href="#">about us</a></li>
-  	 				<li><a href="#">1</a></li>
-  	 				<li><a href="#">2</a></li>
+  	 				
   	 				
   	 			</ul>
   	 		</div>
@@ -19,8 +18,7 @@ const Footer = () => (
   	 			<h4>get help</h4>
   	 			<ul>
   	 				<li><a href="#">FAQ</a></li>
-  	 				<li><a href="#">1</a></li>
-  	 				<li><a href="#">2</a></li>
+  	 				
   	 				
   	 			</ul>
   	 		</div>
@@ -28,7 +26,7 @@ const Footer = () => (
   	 			<h4>不知道放什么</h4>
   	 			<ul>
   	 				<li><a href="#">1</a></li>
-  	 				<li><a href="#">2</a></li>
+  	 			
   	 				
   	 			</ul>
   	 		</div>

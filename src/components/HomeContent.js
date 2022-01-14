@@ -49,6 +49,10 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-between"
       },
 
+      media: {
+        height: 240
+      },
+
 }));
 
 
@@ -65,7 +69,7 @@ function HomeContent() {
       </Box>
       <Container maxWidth="lg" className={classes.blogsContainer}>
         <Typography variant="h4" className={classes.blogTitle}>
-          Articles
+          Navigations
         </Typography>
 
         <Grid container spacing={3}>
@@ -74,20 +78,16 @@ function HomeContent() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  image="https://www.ontariouniversitiesinfo.ca/assets/files/images/feature%20image%206.jpg"
                   title="Contemplative Reptile"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    React useContext
+                    University Of Windsor Home Page
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
                     Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                     across all continents except Antarctica
-
-
-
-
                   </Typography>
                 </CardContent>
               </CardActionArea>
