@@ -1,15 +1,17 @@
-import { PageHeader } from 'antd';
+import { PageHeader, Space } from 'antd';
 import { Breadcrumb } from 'antd';
 import { Typography, Switch } from 'antd';
 import React from 'react';
-//import { useState } from 'react'; 没太用明白usestate在这里是干什么的
+import { Divider } from 'antd';
+import { useState } from 'react'; 
 
 const { Paragraph, Text } = Typography;
 
 function AboutContent() {
+    const { Title } = Typography;
     const [ellipsis, setEllipsis] = React.useState(true);
     return (
-    <div className='PageHeader'>
+    <div className='PageContent'>
 
     <Breadcrumb>
     <Breadcrumb.Item>
@@ -23,34 +25,52 @@ function AboutContent() {
   <PageHeader
     className="site-page-header"
     title="SmartCampus- A better Experience in campus"
-    subTitle="This is a subtitle"/>
-        <div className='Content'>
-            <Switch
-        checked={ellipsis}
-        onChange={() => {
-          setEllipsis(!ellipsis);
-        }}/>
-         <Paragraph ellipsis={ellipsis}>
-         The University of Windsor is a comprehensive, student-focused university, with more than 16,000 students enrolled in a broad range of undergraduate and graduate programs, including:
-      </Paragraph>
+    subTitle="Created by COMP499 Group Supervised By Xiaobu Yuan Instructor"/>
+    <Paragraph>
+      Ant Design interprets the color system into two levels: a system-level color system and a
+      product-level color system.
+    </Paragraph>
+    <Paragraph>
+      Ant Design&#x27;s design team preferred to design with the HSB color model, which makes it
+      easier for designers to have a clear psychological expectation of color when adjusting colors,
+      as well as facilitate communication in teams.
+    </Paragraph>
+    <Space direction='vertical'>
+    <Title level={3}>Who are we?</Title>
+    <Divider/>
+    
+    <Text strong>We are a group of four members creating this helpful website :)</Text>
+    <Text >Lorry Wei: wei12e@uwindsor.ca</Text>
+    <Text >Changkuan Gao: gao14o@uwindsor.ca</Text>
+    <Text></Text>
+    <Text></Text>
+    <Divider/>
+    <Title level={3}>Contact Us</Title>
+    <Paragraph>Due to COVID-19, we have suspended our regular office hours until we return to campus.
+    You can also reach any of us individually on the Discord server or our email addresses listed above, our with our society email address css@uwindsor.ca.
+    </Paragraph>
+    <Paragraph>Due to COVID-19, we have suspended our regular office hours until we return to campus.
+    You can also reach any of us individually on the Discord server or our email addresses listed above, our with our society email address css@uwindsor.ca.
+    </Paragraph>
+    <Paragraph>Due to COVID-19, we have suspended our regular office hours until we return to campus.
+    You can also reach any of us individually on the Discord server or our email addresses listed above, our with our society email address css@uwindsor.ca.
+    </Paragraph>
+    <Divider/>
+    <Title level={3}>How Do I contribute to this project</Title>
+    <Paragraph>Everyone in the Computer Science Society is elected by you, the undergraduate students in CS.
 
-      <Paragraph ellipsis={ellipsis ? { rows: 2, expandable: true, symbol: 'more' } : false}>
-      We have strong student-faculty relationships, exceptional award-winning faculty and innovative staff. It creates a unifying atmosphere of excellence across all of our faculties to encourage lifelong learning, teaching, research and discovery.
-The University of Windsor also ushered in a new era in September 2015 with the opening of classes at the first phase of its downtown campus in the heart of Windsor’s core. The new building—which retains the historic facade of the former Windsor Star newspaper building—houses the School of Social Work and the Centre for Executive and Professional Education.
-The second phase of the downtown campus includes the School of Creative Arts, located in the century-old site of the Windsor Armouries and the Alan Wildeman Centre for Creative Arts.
-      </Paragraph>
+See the CSS Constitution which contains the titles and descriptions of all roles in CSS.
 
-      <Text
-        style={ellipsis ? { width: 100 } : undefined}
-        ellipsis={ellipsis ? { tooltip: 'I am ellipsis now!' } : false}
-      >
-        The University of Windsor is located next to North America’s busiest international border crossing and looks out on one of Canada’s most beautiful waterfronts on the Detroit River. Windsor is also Canada’s southernmost city and has some of the country’s best weather.
-      </Text>
+Elections are now split up into two rounds. Nominations for the first round of positions which includes all head and executive positions takes place in February, and the second round for the rest of the positions takes place in March. If a student runs for a position in the first round and fails to get the votes, they may run for another position in the second round.
 
+The vote for our two first-year representatives for the current school year usually takes place in September or October.
 
+When the time comes, everyone will be notified via email and Discord on how to nominate and vote for CSS positions.
 
-        
-        </div>
+Here is the most current chart showing the hierarchy of positions on CSS:</Paragraph>
+<Divider/>
+
+    </Space>
     </div>
     )
 }
