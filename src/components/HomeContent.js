@@ -86,6 +86,8 @@ function HomeContent() {
                     across all continents except Antarctica
 
 
+
+
                   </Typography>
                 </CardContent>
               </CardActionArea>
