@@ -8,6 +8,7 @@ import { useState } from 'react';
 const { Paragraph, Text } = Typography;
 
 function AboutContent() {
+    
     const { Title } = Typography;
     const [ellipsis, setEllipsis] = React.useState(true);
     return (
@@ -26,6 +27,8 @@ function AboutContent() {
     className="site-page-header"
     title="SmartCampus- A better Experience in campus"
     subTitle="Created by COMP499 Group Supervised By Xiaobu Yuan Instructor"/>
+
+<div className='paragraph' style={{textAlignVertical: "center",textAlign: "center",}}>
     <Paragraph>
       Ant Design interprets the color system into two levels: a system-level color system and a
       product-level color system.
@@ -36,27 +39,25 @@ function AboutContent() {
       as well as facilitate communication in teams.
     </Paragraph>
     <Space direction='vertical'>
-    <Title level={3}>Who are we?</Title>
-    <Divider/>
+    <Divider>Who are We</Divider>
     
     <Text strong>We are a group of four members creating this helpful website :)</Text>
     <Text >Lorry Wei: wei12e@uwindsor.ca</Text>
     <Text >Changkuan Gao: gao14o@uwindsor.ca</Text>
     <Text></Text>
     <Text></Text>
-    <Divider/>
-    <Title level={3}>Contact Us</Title>
+    <Divider>Contact Us</Divider>
+    <p>
+    Due to COVID-19, we have suspended our regular office hours until we return to campus.
+    You can also reach any of us individually on the Discord server or our email addresses listed above, our with our society email address css@uwindsor.ca.
+    </p>
     <Paragraph>Due to COVID-19, we have suspended our regular office hours until we return to campus.
     You can also reach any of us individually on the Discord server or our email addresses listed above, our with our society email address css@uwindsor.ca.
     </Paragraph>
     <Paragraph>Due to COVID-19, we have suspended our regular office hours until we return to campus.
     You can also reach any of us individually on the Discord server or our email addresses listed above, our with our society email address css@uwindsor.ca.
     </Paragraph>
-    <Paragraph>Due to COVID-19, we have suspended our regular office hours until we return to campus.
-    You can also reach any of us individually on the Discord server or our email addresses listed above, our with our society email address css@uwindsor.ca.
-    </Paragraph>
-    <Divider/>
-    <Title level={3}>How Do I contribute to this project</Title>
+    <Divider>How Do I contribute to this project</Divider>
     <Paragraph>Everyone in the Computer Science Society is elected by you, the undergraduate students in CS.
 
 See the CSS Constitution which contains the titles and descriptions of all roles in CSS.
@@ -67,11 +68,23 @@ The vote for our two first-year representatives for the current school year usua
 
 When the time comes, everyone will be notified via email and Discord on how to nominate and vote for CSS positions.
 
-Here is the most current chart showing the hierarchy of positions on CSS:</Paragraph>
+Here is the most current chart showing the hierarchy of positions on CSS:
+      
+</Paragraph>
 <Divider/>
+</Space>
 
-    </Space>
-    </div>
+</div>
+
+
+
+
+
+
+
+    
+</div>
+    
     )
 }
 
