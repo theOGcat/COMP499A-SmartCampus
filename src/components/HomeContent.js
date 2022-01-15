@@ -166,7 +166,7 @@ function HomeContent() {
 
           Career Tracks: Web developer, software developer, computer programmer, IT manager, video game developer, graduate studies.
 
-      </Typography>
+        </Typography>
 
       
       <Grid item xs={12} sm={16} md={12}>
@@ -182,7 +182,7 @@ function HomeContent() {
               </CardActionArea>
               
             </Card>
-          </Grid>
+      </Grid>
 
 
       </Container>
