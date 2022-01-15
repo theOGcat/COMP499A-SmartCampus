@@ -94,7 +94,58 @@ function HomeContent() {
               
             </Card>
           </Grid>
+
+          <Grid item xs={12} sm={6} md={4}>
+            <Card className={classes.card}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image="https://www.ontariouniversitiesinfo.ca/assets/files/images/feature%20image%206.jpg"
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    University Of Windsor Home Page
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                    across all continents except Antarctica
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              
+            </Card>
           </Grid>
+
+
+
+          <Grid item xs={12} sm={6} md={4}>
+            <Card className={classes.card}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image="https://www.ontariouniversitiesinfo.ca/assets/files/images/feature%20image%206.jpg"
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    University Of Windsor Home Page
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                    across all continents except Antarctica
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              
+            </Card>
+          </Grid>
+
+
+          </Grid>
+
+        
+
         <Typography  >It’s a digital world and with this degree, you will have the flexibility to chart your own career path in almost any industry. We offer hands-on learning opportunities and support as you learn computer languages, operation systems, and the mathematics behind computation. University degree holders from another subject area can fast track through this program. This excellent career prep has helped all of our grads find jobs in their chosen fields within two years. UWindsor Computer Science program is tied for first in Ontario university employment rates.
 
 Sample Courses:Introduction to Algorithms and Programming, System Programming, Computer Architecture I: Digital Design, Database Management Systems, Web Information Systems Development
