@@ -1,23 +1,24 @@
 import { PageHeader, Space, Breadcrumb, Typography, Switch, Divider, Carousel, Radio} from 'antd';
 import React from 'react';
 import { useState } from 'react'; 
+import uwindsor from '../images/uwindsor.jpg';
+import uwindsor1 from '../images/1.jpg';
 const { Paragraph, Text } = Typography;
 
-
 function AboutContent() {
+
+
  
   const contentStyle = {
-    height: '270px',
+    height: '500px',
     color: '#fff',
-    lineHeight: '160px',
     textAlign: 'center',
-    background: '#364d79',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
   };
-    const [dotPosition, setDotPosition] = React.useState('top');
-    const handlePositionChange = ({ target: { value } }) => {
-      setDotPosition(value);
-    };
-
+  const contentStyle1 = {...contentStyle,...{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${uwindsor})`}};
+  const contentStyle2 = {...contentStyle,...{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${uwindsor1})`}};
     //const { Title } = Typography;
     const [ellipsis, setEllipsis] = React.useState(true);
     return (
@@ -50,8 +51,26 @@ function AboutContent() {
     </Paragraph>
     
 
-<div className='paragraph' style={{textAlign: "center",}}>
+<div className='paragraph' style={{textAlign: "center", paddingBottom:400}}>
     
+<Divider>Gallary</Divider>
+
+      <Carousel style={{marginLeft:200, marginRight:200}} autoplay>
+        <div>
+        <h3 style={contentStyle1}>1</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle2}>2</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>3</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>4</h3>
+        </div>
+      </Carousel>
+
+
     {/*<Space direction='vertical'>*/}
     <Divider>Who are We</Divider>
     <Space direction='vertical'>
@@ -92,30 +111,10 @@ When the time comes, everyone will be notified via email and Discord on how to n
 Here is the most current chart showing the hierarchy of positions on CSS:
       
 </Paragraph>
-<Divider>Gallary</Divider>
+
 </div>
 
 
-<Radio.Group onChange={handlePositionChange} value={dotPosition} style={{ marginBottom: 8 }}>
-        <Radio.Button value="top">Top</Radio.Button>
-        <Radio.Button value="bottom">Bottom</Radio.Button>
-        <Radio.Button value="left">Left</Radio.Button>
-        <Radio.Button value="right">Right</Radio.Button>
-      </Radio.Group>
-      <Carousel dotPosition={dotPosition}>
-        <div>
-          <h3 style={contentStyle}>1</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>2</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>3</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>4</h3>
-        </div>
-      </Carousel>
 
 
 
