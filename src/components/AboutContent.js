@@ -1,17 +1,28 @@
-import { PageHeader, Space } from 'antd';
-import { Breadcrumb } from 'antd';
-import { Typography, Switch } from 'antd';
+import { PageHeader, Space, Breadcrumb, Typography, Switch, Divider, Carousel, Radio} from 'antd';
 import React from 'react';
-import { Divider } from 'antd';
 import { useState } from 'react'; 
-
 const { Paragraph, Text } = Typography;
 
+
 function AboutContent() {
-    
-    const { Title } = Typography;
+ 
+  const contentStyle = {
+    height: '270px',
+    color: '#fff',
+    lineHeight: '160px',
+    textAlign: 'center',
+    background: '#364d79',
+  };
+    const [dotPosition, setDotPosition] = React.useState('top');
+    const handlePositionChange = ({ target: { value } }) => {
+      setDotPosition(value);
+    };
+
+    //const { Title } = Typography;
     const [ellipsis, setEllipsis] = React.useState(true);
     return (
+      
+
     <div className='PageContent'>
 
     <Breadcrumb>
@@ -28,8 +39,7 @@ function AboutContent() {
     title="SmartCampus- A better Experience in campus"
     subTitle="Created by COMP499 Group Supervised By Xiaobu Yuan Instructor"/>
 
-<div className='paragraph' style={{textAlignVertical: "center",textAlign: "center",}}>
-    <Paragraph>
+<Paragraph>
       Ant Design interprets the color system into two levels: a system-level color system and a
       product-level color system.
     </Paragraph>
@@ -38,14 +48,20 @@ function AboutContent() {
       easier for designers to have a clear psychological expectation of color when adjusting colors,
       as well as facilitate communication in teams.
     </Paragraph>
-    <Space direction='vertical'>
-    <Divider>Who are We</Divider>
     
+
+<div className='paragraph' style={{textAlign: "center",}}>
+    
+    {/*<Space direction='vertical'>*/}
+    <Divider>Who are We</Divider>
+    <Space direction='vertical'>
     <Text strong>We are a group of four members creating this helpful website :)</Text>
     <Text >Lorry Wei: wei12e@uwindsor.ca</Text>
     <Text >Changkuan Gao: gao14o@uwindsor.ca</Text>
+    
     <Text></Text>
     <Text></Text>
+    </Space>
     <Divider>Contact Us</Divider>
     <p>
     Due to COVID-19, we have suspended our regular office hours until we return to campus.
@@ -58,7 +74,12 @@ function AboutContent() {
     You can also reach any of us individually on the Discord server or our email addresses listed above, our with our society email address css@uwindsor.ca.
     </Paragraph>
     <Divider>How Do I contribute to this project</Divider>
-    <Paragraph>Everyone in the Computer Science Society is elected by you, the undergraduate students in CS.
+    <Switch
+        checked ={!ellipsis}
+        onChange={()=>{setEllipsis(!ellipsis)}}
+      />
+
+    <Paragraph ellipsis = {ellipsis}>Everyone in the Computer Science Society is elected by you, the undergraduate students in CS.
 
 See the CSS Constitution which contains the titles and descriptions of all roles in CSS.
 
@@ -71,10 +92,33 @@ When the time comes, everyone will be notified via email and Discord on how to n
 Here is the most current chart showing the hierarchy of positions on CSS:
       
 </Paragraph>
-<Divider/>
-</Space>
-
+<Divider>Gallary</Divider>
 </div>
+
+
+<Radio.Group onChange={handlePositionChange} value={dotPosition} style={{ marginBottom: 8 }}>
+        <Radio.Button value="top">Top</Radio.Button>
+        <Radio.Button value="bottom">Bottom</Radio.Button>
+        <Radio.Button value="left">Left</Radio.Button>
+        <Radio.Button value="right">Right</Radio.Button>
+      </Radio.Group>
+      <Carousel dotPosition={dotPosition}>
+        <div>
+          <h3 style={contentStyle}>1</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>2</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>3</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>4</h3>
+        </div>
+      </Carousel>
+
+
+
 
 
 

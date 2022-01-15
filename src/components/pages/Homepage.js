@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeContent from '../HomeContent'
+import HomeContent from '../HomeContent';
 
 function Homepage() {
     return (
