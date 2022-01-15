@@ -2,11 +2,12 @@ import React from 'react';
 //import { ReactDOM } from 'react';
 import './App.css'
 import Layout from './components/Layout';
-import HomeContent from './components/HomeContent';
+import Homepage from './components/pages/Homepage';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 import {Navigate} from 'react-router-dom';
 import About from './components/pages/About';
 import Footer from './components/Footer';
+
 
 
 function App(){
@@ -16,9 +17,9 @@ function App(){
       <Router>
       <Layout>
           <Routes>
-          <Route path ='/HomeContent' element={<HomeContent/>}/>
+          <Route path ='/Homepage' element={<Homepage/>}/>
           <Route path ='/About' element={<About/>}/>
-          <Route exact path="/" element={<Navigate to ='/HomeContent' replace />}/>  
+          <Route exact path="/" element={<Navigate to ='/Homepage' replace />}/>  
           
           </Routes>
           </Layout>
