@@ -10,6 +10,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
+import Mapp from './Map';
+
+
 
 const useStyles = makeStyles((theme) => ({
 
@@ -39,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
       blogsContainer: {
         paddingTop: theme.spacing(3),
-        paddingBottom: theme.spacing(50)
+        paddingBottom: theme.spacing(40)
       },
 
 
@@ -75,19 +78,25 @@ function HomeContent() {
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
             <Card className={classes.card}>
+            
               <CardActionArea>
+                
                 <CardMedia
                   className={classes.media}
                   image="https://www.ontariouniversitiesinfo.ca/assets/files/images/feature%20image%206.jpg"
-                  title="Contemplative Reptile"
+                  
+                  title="Contemplative Reptile" 
+                  
                 />
+
                 <CardContent>
+                
                   <Typography gutterBottom variant="h5" component="h2">
                     University Of Windsor Home Page
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
+                  <a href="https://www.uwindsor.ca/about-the-university">University Of Windsor Home Page</a>
+                    
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -100,7 +109,7 @@ function HomeContent() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://www.ontariouniversitiesinfo.ca/assets/files/images/feature%20image%206.jpg"
+                  image="https://windsorite.ca/wp-content/uploads/2021/10/uwindsor-aerial.jpg"
                   title="Contemplative Reptile"
                 />
                 <CardContent>
@@ -108,8 +117,8 @@ function HomeContent() {
                     University Of Windsor Home Page
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
+
+                    <a href="https://www.youtube.com/user/uwindsor">University Of Windsor Youtube Page</a>
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -124,7 +133,7 @@ function HomeContent() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://www.ontariouniversitiesinfo.ca/assets/files/images/feature%20image%206.jpg"
+                  image="https://www.ic.gc.ca/eic/site/051.nsf/vwimages/35560_University-of-Windsor1.jpg/$file/35560_University-of-Windsor1.jpg"
                   title="Contemplative Reptile"
                 />
                 <CardContent>
@@ -132,8 +141,7 @@ function HomeContent() {
                     University Of Windsor Home Page
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
+                  <a href="https://twitter.com/uwindsor">University Of Windsor Twitter Page</a>
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -146,37 +154,42 @@ function HomeContent() {
 
         
 
-        <Typography  >It’s a digital world and with this degree, you will have the flexibility to chart your own career path in almost any industry. We offer hands-on learning opportunities and support as you learn computer languages, operation systems, and the mathematics behind computation. University degree holders from another subject area can fast track through this program. This excellent career prep has helped all of our grads find jobs in their chosen fields within two years. UWindsor Computer Science program is tied for first in Ontario university employment rates.
+        <Typography  >
+          It’s a digital world and with this degree, you will have the flexibility to chart your own career path in almost any industry. 
+          We offer hands-on learning opportunities and support as you learn computer languages, operation systems, and the mathematics behind 
+          computation. University degree holders from another subject area can fast track through this program. This excellent career prep has 
+          helped all of our grads find jobs in their chosen fields within two years. UWindsor Computer Science program is tied for first in Ontario 
+          university employment rates.
 
-Sample Courses:Introduction to Algorithms and Programming, System Programming, Computer Architecture I: Digital Design, Database Management Systems, Web Information Systems Development
+          Sample Courses:Introduction to Algorithms and Programming, System Programming, Computer Architecture I: Digital Design, Database Management
+          Systems, Web Information Systems Development
 
-Career Tracks: Web developer, software developer, computer programmer, IT manager, video game developer, graduate studies
+          Career Tracks: Web developer, software developer, computer programmer, IT manager, video game developer, graduate studies.
 
-ADMISSION REQUIREMENTS FOR APPLICANTS IN CANADA
-Course Requirements: Advanced Functions/MHF4U. English/ENG4U.
-Strongly Recommended: Calculus & Vectors/MCV4U
-Minimum Average: 70% (70% average of math courses)
-Minimum Average (Co-op): 75% (Co-op Programs: 75% + 70% average in all attempted math courses, excluding Data Management/MDM4U)
-Mean Average (Entering Fall 2019): 82%
+        </Typography>
 
-Learn more about Course EquivalenciesIt’s a digital world and with this degree, you will have the flexibility to chart your own career path in almost any industry. We offer hands-on learning opportunities and support as you learn computer languages, operation systems, and the mathematics behind computation. University degree holders from another subject area can fast track through this program. This excellent career prep has helped all of our grads find jobs in their chosen fields within two years. UWindsor Computer Science program is tied for first in Ontario university employment rates.
+      
+      <Grid item xs={12} sm={16} md={12}>
+            <Card className={classes.card}>
+              <CardActionArea>
+                
+                <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                    University Of Windsor Map
+                  </Typography>
+                <Mapp />
+                </CardContent>
+              </CardActionArea>
+              
+            </Card>
+      </Grid>
 
-Sample Courses:Introduction to Algorithms and Programming, System Programming, Computer Architecture I: Digital Design, Database Management Systems, Web Information Systems Development
 
-Career Tracks: Web developer, software developer, computer programmer, IT manager, video game developer, graduate studies
-
-ADMISSION REQUIREMENTS FOR APPLICANTS IN CANADA
-Course Requirements: Advanced Functions/MHF4U. English/ENG4U.
-Strongly Recommended: Calculus & Vectors/MCV4U
-Minimum Average: 70% (70% average of math courses)
-Minimum Average (Co-op): 75% (Co-op Programs: 75% + 70% average in all attempted math courses, excluding Data Management/MDM4U)
-Mean Average (Entering Fall 2019): 82%
-
-</Typography>
       </Container>
+      
         </div>
 
-
+      
     )
 }
 
