@@ -1,5 +1,5 @@
 import { createTheme } from '@material-ui/core/styles';
-
+//this is for HomeContent
 const theme = createTheme({
     palette: {
         primary: {
