@@ -25,7 +25,7 @@ const Footer = () => (
   	 		<div class="footer-col">
   	 			<h4>Account</h4>
   	 			<ul>
-  	 				<li><a href="#">Manage Account</a></li>
+  	 				<li><a href="/SignIn">Manage Account</a></li>
   	 			
   	 				
   	 			</ul>

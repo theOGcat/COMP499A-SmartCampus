@@ -29,7 +29,7 @@ import {
                 <NavLink to='/contact-us' activeStyle>
                   Blog
                 </NavLink>
-                <NavLink to='/sign-up' activeStyle>
+                <NavLink to='/SignUp' activeStyle>
                   Sign Up
                 </NavLink>
                 {/* Second Nav */}

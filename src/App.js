@@ -7,8 +7,8 @@ import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 import {Navigate} from 'react-router-dom';
 import About from './components/pages/About';
 import Footer from './components/Footer';
-
-
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
 
 function App(){
   return(
@@ -19,6 +19,9 @@ function App(){
           <Routes>
           <Route path ='/Homepage' element={<Homepage/>}/>
           <Route path ='/About' element={<About/>}/>
+          <Route path ='/SignIn' element={<SignIn/>}/>
+          <Route path ='/SignUp' element={<SignUp/>}/>
+          
           <Route exact path="/" element={<Navigate to ='/Homepage' replace />}/>  
           
           </Routes>
