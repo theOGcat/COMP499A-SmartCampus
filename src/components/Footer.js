@@ -7,7 +7,7 @@ const Footer = () => (
 	<div class="container">
   	 	<div class="row">
   	 		<div class="footer-col">
-  	 			<h4>company</h4>
+  	 			<h4>University Of Windsor</h4>
   	 			<ul>
   	 				<li><a href="/About">about us</a></li>
   	 				
@@ -17,15 +17,15 @@ const Footer = () => (
   	 		<div class="footer-col">
   	 			<h4>get help</h4>
   	 			<ul>
-  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="http://ask.uwindsor.ca/">FAQ</a></li>
   	 				
   	 				
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
-  	 			<h4>不知道放什么</h4>
+  	 			<h4>Account</h4>
   	 			<ul>
-  	 				<li><a href="#">1</a></li>
+  	 				<li><a href="#">Manage Account</a></li>
   	 			
   	 				
   	 			</ul>
@@ -33,9 +33,9 @@ const Footer = () => (
   	 		<div class="footer-col">
   	 			<h4>follow us</h4>
   	 			<div class="social-links">
-  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
-  	 				<a href="#"><i class="fab fa-twitter"></i></a>
-  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="https://www.facebook.com/UWindsor/"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="https://twitter.com/uwindsor"><i class="fab fa-twitter"></i></a>
+  	 				<a href="https://twitter.com/uwindsor"><i class="fab fa-instagram"></i></a>
   	 				
   	 			</div>
   	 		</div>
