@@ -9,8 +9,6 @@ const { Paragraph, Text } = Typography;
 
 function AboutContent() {
 
-
- 
   const contentStyle = {
     height: '600px',
     color: '#fff',
