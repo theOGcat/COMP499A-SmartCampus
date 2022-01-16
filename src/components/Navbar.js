@@ -29,14 +29,14 @@ import {
                 <NavLink to='/contact-us' activeStyle>
                   Blog
                 </NavLink>
-                <NavLink to='/SignUp' activeStyle>
+                <NavLink to='/SignUpPage' activeStyle>
                   Sign Up
                 </NavLink>
                 {/* Second Nav */}
                 {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
               </NavMenu>
               <NavBtn>
-                <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+                <NavBtnLink to='/SignInPage'>Sign In</NavBtnLink>
               </NavBtn>
             </Nav>
           </>
