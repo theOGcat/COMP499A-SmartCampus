@@ -28,8 +28,9 @@ function App(){
           
           </Routes>
           </Layout>
+          
       </Router>
-      <Footer /> 
+      <Footer />
     </>
     
   );
