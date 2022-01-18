@@ -68,7 +68,7 @@ function BlogHomeContent() {
     return (
         <div className='home-Container'>
         <Box className={classes.hero}>
-        <Box>Welcome To Our Blog</Box>
+        <Box>Welcome To Our Blogs</Box>
         
       </Box>
       <Container maxWidth="lg" className={classes.blogsContainer}>
@@ -113,16 +113,16 @@ function BlogHomeContent() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://windsorite.ca/wp-content/uploads/2021/10/uwindsor-aerial.jpg"
+                  image="https://media.wired.com/photos/5c9040ee4950d24718d6da99/1:1/w_1800,h_1800,c_limit/shoppingcart-1066110386.jpg"
                   title="Contemplative Reptile"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    University Of Windsor Home Page
+                    Shopping/Malls Around The University
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
 
-                    <a href="https://www.youtube.com/user/uwindsor">University Of Windsor Youtube Page</a>
+                    <a href="./Blog">Shopping/Malls Around The University</a>
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -137,15 +137,15 @@ function BlogHomeContent() {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://www.ic.gc.ca/eic/site/051.nsf/vwimages/35560_University-of-Windsor1.jpg/$file/35560_University-of-Windsor1.jpg"
+                  image="https://cdn.vox-cdn.com/thumbor/ADYxDCTUKewcGxhYGZ_XMUh4uzQ=/0x0:2040x1360/1200x675/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/64035800/acastro_190618_1777_cloud_gaming_0003.0.jpg"
                   title="Contemplative Reptile"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    University Of Windsor Home Page
+                   Gaming And News  
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                  <a href="https://twitter.com/uwindsor">University Of Windsor Twitter Page</a>
+                  <a href="./Blog">Gaming And News </a>
                   </Typography>
                 </CardContent>
               </CardActionArea>
