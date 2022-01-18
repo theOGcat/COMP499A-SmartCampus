@@ -9,8 +9,12 @@ import About from './components/pages/About';
 import Footer from './components/Footer';
 import SignInPage from './components/pages/SignInPage';
 import SignUpPage from './components/pages/SignUpPage';
+
 import Blog from './components/Blog';
-import BlogHomePage from './components/BlogHomePage'
+import BlogHomePage from './components/BlogHomePage';
+
+import Course from './components/pages/Course';
+
 
 function App(){
   return(
@@ -21,6 +25,7 @@ function App(){
           <Routes>
           <Route path ='/Homepage' element={<Homepage/>}/>
           <Route path ='/About' element={<About/>}/>
+          <Route path ='/Course' element={<Course/>}/>
           <Route path ='/SignInPage' element={<SignInPage/>}/>
           <Route path ='/SignUpPage' element={<SignUpPage/>}/>
           <Route path ='/BlogHomePage' element={<BlogHomePage/>}/>
@@ -29,6 +34,7 @@ function App(){
           
           </Routes>
           </Layout>
+          
       </Router>
       <Footer />
     </>

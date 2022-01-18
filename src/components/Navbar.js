@@ -23,7 +23,7 @@ import {
                 <NavLink to='/About' activeStyle>
                   About
                 </NavLink>
-                <NavLink to='/services' activeStyle>
+                <NavLink to='/Course' activeStyle>
                   Courses
                 </NavLink>
                 <NavLink to='/BlogHomePage' activeStyle>
