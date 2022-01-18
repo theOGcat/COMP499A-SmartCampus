@@ -9,6 +9,8 @@ import About from './components/pages/About';
 import Footer from './components/Footer';
 import SignInPage from './components/pages/SignInPage';
 import SignUpPage from './components/pages/SignUpPage';
+import Blog from './components/Blog';
+import BlogHomePage from './components/BlogHomePage'
 
 function App(){
   return(
@@ -21,7 +23,8 @@ function App(){
           <Route path ='/About' element={<About/>}/>
           <Route path ='/SignInPage' element={<SignInPage/>}/>
           <Route path ='/SignUpPage' element={<SignUpPage/>}/>
-          
+          <Route path ='/BlogHomePage' element={<BlogHomePage/>}/>
+          <Route path ='/Blog' element={<Blog/>}/>
           <Route exact path="/" element={<Navigate to ='/Homepage' replace />}/>  
           
           </Routes>

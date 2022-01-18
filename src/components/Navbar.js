@@ -26,12 +26,13 @@ import {
                 <NavLink to='/services' activeStyle>
                   Courses
                 </NavLink>
-                <NavLink to='/contact-us' activeStyle>
+                <NavLink to='/BlogHomePage' activeStyle>
                   Blog
                 </NavLink>
                 <NavLink to='/SignUpPage' activeStyle>
                   Sign Up
                 </NavLink>
+                
                 {/* Second Nav */}
                 {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
               </NavMenu>
