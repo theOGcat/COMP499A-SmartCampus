@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentBox from './comment-box';
+import CommentBox from './BlogPages/comment-box';
 
 export default class BlogPage extends React.Component {
   render() {
