@@ -6,7 +6,6 @@ import Homepage from './components/pages/Homepage';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 import {Navigate} from 'react-router-dom';
 import About from './components/pages/About';
-import Footer from './components/Footer';
 import SignInPage from './components/pages/SignInPage';
 import SignUpPage from './components/pages/SignUpPage';
 
