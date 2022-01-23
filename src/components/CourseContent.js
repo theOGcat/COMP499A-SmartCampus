@@ -46,13 +46,14 @@ const columns = [
     {
       field: 'Instructor',
       headerName: 'Instructor',
+      width:200
       
     },
     {
         field: 'Prereq',
         headerName: 'Prerequisite(s)',
         //type: 'number',
-        width: 200,
+        width: 500,
         editable: true,
       },
   ];
