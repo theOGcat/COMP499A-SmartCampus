@@ -96,7 +96,7 @@ function BlogHomeContent() {
                     Food/Resturant Around The University
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                  <a href="./Blog">Food/Resturant Around The University</a>
+                  <a href="./FoodBlog">Food/Resturant Around The University</a>
                     
                   </Typography>
                 </CardContent>
@@ -122,7 +122,7 @@ function BlogHomeContent() {
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
 
-                    <a href="./Blog">Shopping/Malls Around The University</a>
+                    <a href="./FoodBlog">Shopping/Malls Around The University</a>
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -145,7 +145,7 @@ function BlogHomeContent() {
                    Gaming And News  
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                  <a href="./Blog">Gaming And News </a>
+                  <a href="./FoodBlog">Gaming And News </a>
                   </Typography>
                 </CardContent>
               </CardActionArea>

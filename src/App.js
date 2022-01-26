@@ -9,7 +9,7 @@ import About from './components/pages/About';
 import SignInPage from './components/pages/SignInPage';
 import SignUpPage from './components/pages/SignUpPage';
 
-import Blog from './components/Blog';
+import FoodBlog from './components/FoodBlog';
 import BlogHomePage from './components/BlogHomePage';
 
 import Course from './components/pages/Course';
@@ -28,7 +28,7 @@ function App(){
           <Route path ='/SignInPage' element={<SignInPage/>}/>
           <Route path ='/SignUpPage' element={<SignUpPage/>}/>
           <Route path ='/BlogHomePage' element={<BlogHomePage/>}/>
-          <Route path ='/Blog' element={<Blog/>}/>
+          <Route path ='/FoodBlog' element={<FoodBlog/>}/>
           <Route exact path="/" element={<Navigate to ='/Homepage' replace />}/>  
           
           </Routes>
