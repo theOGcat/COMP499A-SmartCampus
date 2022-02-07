@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentBox from './BlogPages/comment-box';
+import CommentBox from '../BlogPages/comment-box';
 
 
 
@@ -326,6 +326,11 @@ function Blogpage() {
         <Typography variant="h4" >
         3rd: Saigon House:
         </Typography>
+        <Typography gutterBottom variant="h6" component="h2">
+                    
+                    Address: 2169 Wyandotte St W, Windsor, ON N9B 1K1
+
+        </Typography>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
             <Card className={classes.card}>
@@ -343,7 +348,7 @@ function Blogpage() {
                 <CardContent>
                 
                   <Typography gutterBottom variant="h5" component="h2">
-                    2nd: Saigon House
+                    3rd: Saigon House
                   </Typography>
                   
                 </CardContent>

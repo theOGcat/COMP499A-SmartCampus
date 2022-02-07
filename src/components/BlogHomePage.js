@@ -122,7 +122,7 @@ function BlogHomeContent() {
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
 
-                    <a href="./FoodBlog">Shopping/Malls Around The University</a>
+                    <a href="./ShoppingBlog">Shopping/Malls Around The University</a>
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -145,7 +145,7 @@ function BlogHomeContent() {
                    Gaming And News  
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                  <a href="./FoodBlog">Gaming And News </a>
+                  <a href="./GameBlog">Gaming And News </a>
                   </Typography>
                 </CardContent>
               </CardActionArea>
