@@ -17,7 +17,7 @@ function Copyright(props) {
     return (
       <Typography variant="body2" color="text.secondary" align="center" {...props}>
         {'Copyright © '}
-        <Link color="inherit" href="https://mui.com/">
+        <Link color="inherit" href="/Homepage">
           Your Website
         </Link>{' '}
         {new Date().getFullYear()}
@@ -30,9 +30,11 @@ function Copyright(props) {
   
   export default function SignIn() {
     const handleSubmit = (event) => {
+
       event.preventDefault();
       const data = new FormData(event.currentTarget);
       // eslint-disable-next-line no-console
+     
       console.log({
         email: data.get('email'),
         password: data.get('password'),
@@ -97,7 +99,7 @@ function Copyright(props) {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="/SignUpPage" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
