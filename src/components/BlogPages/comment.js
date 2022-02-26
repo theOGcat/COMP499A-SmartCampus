@@ -34,7 +34,7 @@ export default class Comment extends React.Component {
     return(
         <div className="comment">
 
-          <img src={this.props.avatarUrl} alt={`${this.props.author}`} />
+          
 
           <p className="comment-header">{this.props.author}</p>
           <p className="comment-body">{commentBody}</p>
