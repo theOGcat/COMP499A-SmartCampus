@@ -11,6 +11,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import axois from 'axios';
+
 
 
 function Copyright(props) {
@@ -30,13 +32,28 @@ function Copyright(props) {
   const theme = createTheme();
   
   export default function SignUp() {
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
       event.preventDefault();
       const data = new FormData(event.currentTarget);
+      const customerEmail = data.get('email');
+      const customerPassword = data.get('password');
+      const customerfirstName = data.get('firstName');
+      const customerlastName = data.get('lastName');
       // eslint-disable-next-line no-console
+      const res = await axois.post(
+        'http://localhost:3001/SignUp',
+        {
+          firstName: customerfirstName,
+          lastName: customerlastName,
+          email: customerEmail,
+          password: customerPassword
+        })
+      
+
       console.log({
         email: data.get('email'),
         password: data.get('password'),
+        firstname: data.get('firstName'),
       });
     };
   
