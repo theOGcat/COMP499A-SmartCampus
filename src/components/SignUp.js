@@ -48,6 +48,7 @@ function Copyright(props) {
           email: customerEmail,
           password: customerPassword
         })
+        console.log(res);
       
 
       console.log({
