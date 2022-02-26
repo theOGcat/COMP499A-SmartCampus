@@ -35,7 +35,7 @@
 /*.comment-actions a:active,
 .comment-actions > a:focus,*/
 .comment-actions > a:hover {
-    color: #fff;
+    color: rgb(248, 239, 239);
 }
 
 .comment-confirm {
@@ -44,7 +44,7 @@
 }
 
 .comment-body {
-    color: #fff;
+    color: rgb(63, 59, 59);
 }
 
 .comment-count {
@@ -83,7 +83,7 @@
 
 .comment-header {
     border-bottom: 2px solid #fff;
-    color: #fff;
+    color: rgb(29, 27, 27);
     margin-bottom: 10px;
     padding-bottom: 5px;
 }
