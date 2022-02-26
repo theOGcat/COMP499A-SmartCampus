@@ -30,7 +30,6 @@ function Copyright(props) {
     );
   }
   
-  
   const theme = createTheme();
   
   export default function SignUp() {
@@ -62,15 +61,9 @@ function Copyright(props) {
           password: customerPassword,
         });
         console.log(res);
-      }
-
-      
-          
+      }  
     };
 
-   
-
-  
     return (
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
