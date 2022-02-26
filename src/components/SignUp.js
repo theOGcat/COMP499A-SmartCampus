@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -11,6 +12,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Alert from "@mui/material/Alert";
 import axois from 'axios';
 
 
@@ -32,6 +34,12 @@ function Copyright(props) {
   const theme = createTheme();
   
   export default function SignUp() {
+    const [firstName, setfistName] = useState('');
+    const [email, setEmail] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [password, setPassword] = useState('')
+    const [isValidated, setValidation] = useState(true)
+
     const handleSubmit = async (event) => {
       event.preventDefault();
       const data = new FormData(event.currentTarget);
@@ -39,24 +47,29 @@ function Copyright(props) {
       const customerPassword = data.get('password');
       const customerfirstName = data.get('firstName');
       const customerlastName = data.get('lastName');
+
+      if(customerEmail.length > 0 && customerPassword.length > 0 && customerfirstName.length > 0 && customerlastName.length > 0){
+        setValidation(true)
+      }else{
+        setValidation(false)
+      }
       // eslint-disable-next-line no-console
-      const res = await axois.post(
-        'http://localhost:3001/SignUp',
-        {
+      if (isValidated){
+        const res = await axois.post("http://localhost:3001/SignUp", {
           firstName: customerfirstName,
           lastName: customerlastName,
           email: customerEmail,
-          password: customerPassword
-        })
+          password: customerPassword,
+        });
         console.log(res);
-      
+      }
 
-      console.log({
-        email: data.get('email'),
-        password: data.get('password'),
-        firstname: data.get('firstName'),
-      });
+      
+          
     };
+
+   
+
   
     return (
       <ThemeProvider theme={theme}>
@@ -65,18 +78,26 @@ function Copyright(props) {
           <Box
             sx={{
               marginTop: 8,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-             
-            </Avatar>
+            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}></Avatar>
             <Typography component="h1" variant="h5">
               Sign up
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+            <Box
+              component="form"
+              noValidate
+              onSubmit={handleSubmit}
+              sx={{ mt: 3 }}
+            >
+            
+            {/* if user input is invalid, show alert message on the screen */}
+              { !isValidated && 
+                <Alert severity="error">Please Complete the Form</Alert>
+              }
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -87,6 +108,9 @@ function Copyright(props) {
                     id="firstName"
                     label="First Name"
                     autoFocus
+                    onBlur={(e) => setfistName(e.target.value)}
+                    error={firstName === ""}
+                    helperText={firstName === "" ? "Field is empty" : ""}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6}>
@@ -97,6 +121,9 @@ function Copyright(props) {
                     label="Last Name"
                     name="lastName"
                     autoComplete="family-name"
+                    onBlur={(e) => setLastName(e.target.value)}
+                    error={lastName === ""}
+                    helperText={lastName === "" ? "Field is empty" : ""}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -107,6 +134,9 @@ function Copyright(props) {
                     label="Email Address"
                     name="email"
                     autoComplete="email"
+                    onBlur={(e) => setEmail(e.target.value)}
+                    error={email === ""}
+                    helperText={email === "" ? "Field is empty" : ""}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -118,11 +148,16 @@ function Copyright(props) {
                     type="password"
                     id="password"
                     autoComplete="new-password"
+                    onBlur={(e) => setPassword(e.target.value)}
+                    error={password === ""}
+                    helperText={password === "" ? "Field is empty" : ""}
                   />
                 </Grid>
                 <Grid item xs={12}>
                   <FormControlLabel
-                    control={<Checkbox value="allowExtraEmails" color="primary" />}
+                    control={
+                      <Checkbox value="allowExtraEmails" color="primary" />
+                    }
                     label="I want to receive inspiration, marketing promotions and updates via email."
                   />
                 </Grid>
@@ -136,8 +171,8 @@ function Copyright(props) {
                 Sign Up
               </Button>
               <Grid container justifyContent="flex-end">
-                <Grid item >
-                  <Link href="/SignInPage" variant="body2" >
+                <Grid item>
+                  <Link href="/SignInPage" variant="body2">
                     Already have an account? Sign in
                   </Link>
                 </Grid>
