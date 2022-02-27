@@ -12,6 +12,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import axois from 'axios';
+
+import { useNavigate } from "react-router-dom";
+
+
 
 function Copyright(props) {
     return (
@@ -29,11 +34,22 @@ function Copyright(props) {
   const theme = createTheme();
   
   export default function SignIn() {
-    const handleSubmit = (event) => {
-
+    const navigate = useNavigate()
+    const handleSubmit = async (event) => {
       event.preventDefault();
       const data = new FormData(event.currentTarget);
-      // eslint-disable-next-line no-console
+      const customerEmail = data.get('email');
+      const customerPassword = data.get('password');
+      const res = await axois.post("http://localhost:3001/SignIn", {
+          email: customerEmail,
+          Password: customerPassword,
+        });
+        console.log(res);
+        if(res.status === 200){
+          
+
+          navigate('/Homepage')
+        }
      
       console.log({
         email: data.get('email'),
