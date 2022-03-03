@@ -39,6 +39,8 @@ function Copyright(props) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [isValidated, setValidation] = useState(true)
+    const [isLogin, setLogin] = useState(false)
+   
 
 
     const navigate = useNavigate()
@@ -51,19 +53,21 @@ function Copyright(props) {
 
       if(customerEmail.length > 0 && customerPassword.length > 0 ){
         setValidation(true)
+        
       }else{
         setValidation(false)
       }
 
       if (isValidated){
+      setLogin(true)
       const res = await axois.post("http://localhost:3001/SignIn", {
           email: customerEmail,
           Password: customerPassword,
         });
         console.log(res);
-        if(res.status === 200){
-          navigate('/Homepage')
-        }
+        // if(res.status === 200){
+        //   navigate('/Homepage')
+        // }
      }
       console.log({
         email: data.get('email'),
@@ -89,9 +93,29 @@ function Copyright(props) {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
+            {/* if user input is invalid, show alert message on the screen */}
             { !isValidated && 
                 <Alert severity="error">Please Complete the Form</Alert>
               }
+              {
+                isLogin &&<>
+                <Typography component="h1" variant="h5" align="center">
+              You are Logged in as {email}
+            </Typography>
+            
+            <Button
+                onClick={() => {setLogin(false)}}
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Logout
+              </Button>
+              </>
+              }
+
+              
+              {isLogin === false &&
             <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
@@ -144,7 +168,9 @@ function Copyright(props) {
                 </Grid>
               </Grid>
             </Box>
+            }
           </Box>
+          
           <Copyright sx={{ mt: 8, mb: 4 }} />
         </Container>
       </ThemeProvider>
