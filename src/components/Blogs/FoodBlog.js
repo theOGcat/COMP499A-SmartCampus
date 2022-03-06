@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentBox from '../BlogPages/comment-box';
 
-
+import styled from "styled-components";
 import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -18,6 +18,8 @@ import axois from 'axios';
 
 
 const useStyles = makeStyles((theme) => ({
+
+  
 
     hero: {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.mcgill.ca/oss/files/oss/styles/hd/public/eatables-3873462_1920.jpg?itok=u-zzZg1P&timestamp=1560998397')`,
@@ -59,6 +61,11 @@ const useStyles = makeStyles((theme) => ({
         height: 240
       },
 
+
+
+
+      
+
 }));
 
 
@@ -71,7 +78,15 @@ function Blogpage() {
     const [content, setcontent] = useState('')
     
     
-
+    const Button = styled.button`
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px 60px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+  `;
 
 
     return (
@@ -442,19 +457,23 @@ function Blogpage() {
                
 
         {isLogin &&<>
-          <Typography component="h1" variant="h5" align="center">
-              You are Not Logged In
-          </Typography>
           
-        </>
-        }
-
-
-        {isLogin === false && <>
           <Typography component="h1" variant="h5" align="center">
               You are Logged in as {userID}
           </Typography>
           <CommentBox apiUrl="api/blog/comments.json" />
+          
+        </>
+        }
+
+        
+        {isLogin === false && <>
+          <Typography component="h1" variant="h5" align="center" >
+              You are Not Signed In, Please Sign in to see the comment.
+          </Typography>
+          <a href="/SignInPage" target="_blank">
+          <Button> Sign In </Button>
+          </a>
           
           </>
         }
