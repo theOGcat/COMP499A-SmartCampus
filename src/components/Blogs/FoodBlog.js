@@ -67,8 +67,8 @@ function Blogpage() {
 
     const classes = useStyles();
     const [isLogin, setLogin] = useState(false)
-
-
+    const [userID, setuserID] = useState('')
+    const [content, setcontent] = useState('')
     
     
 
@@ -437,12 +437,29 @@ function Blogpage() {
 
 
 
+        
+                
+               
 
-
-
-        {isLogin === false &&
-        <CommentBox apiUrl="api/blog/comments.json" />
+        {isLogin &&<>
+          <Typography component="h1" variant="h5" align="center">
+              You are Not Logged In
+          </Typography>
+          
+        </>
         }
+
+
+        {isLogin === false && <>
+          <Typography component="h1" variant="h5" align="center">
+              You are Logged in as {userID}
+          </Typography>
+          <CommentBox apiUrl="api/blog/comments.json" />
+          
+          </>
+        }
+
+
       </Container>
       
         </div>
