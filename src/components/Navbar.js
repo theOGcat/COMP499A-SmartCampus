@@ -37,7 +37,7 @@ import {
                 {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
               </NavMenu>
               <NavBtn>
-                <NavBtnLink to='/SignInPage'>Sign In</NavBtnLink>
+                <NavBtnLink to='/SignIn'>Sign In</NavBtnLink>
               </NavBtn>
             </Nav>
           </>

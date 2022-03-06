@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -60,128 +60,121 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-function BlogHomeContent() {
+function BlogHomeContent(isLogin) {
 
     const classes = useStyles();
 
+    
+   
 
     return (
-        <div className='home-Container'>
+      <div className="home-Container">
         <Box className={classes.hero}>
-        <Box>Welcome To Our Blogs</Box>
-        
-      </Box>
-      <Container maxWidth="lg" className={classes.blogsContainer}>
-        <Typography variant="h4" className={classes.blogTitle}>
-          Our Blogs
-        </Typography>
+          <Box>Welcome To Our Blogs</Box>
+        </Box>
+        <Container maxWidth="lg" className={classes.blogsContainer}>
+          <Typography variant="h4" className={classes.blogTitle}>
+            Our Blogs
+          </Typography>
 
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
-            
-              <CardActionArea>
-                
-                <CardMedia
-                  className={classes.media}
-                  image="https://www.eatthis.com/wp-content/uploads/sites/4/2020/12/unhealthiest-foods-planet.jpg?quality=82&strip=1&resize=640%2C360"
-                  
-                  title="Contemplative Reptile" 
-                  
-                />
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6} md={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image="https://www.eatthis.com/wp-content/uploads/sites/4/2020/12/unhealthiest-foods-planet.jpg?quality=82&strip=1&resize=640%2C360"
+                    title="Contemplative Reptile"
+                  />
 
-                <CardContent>
-                
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Food/Resturant Around The University
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                  <a href="./FoodBlog">Food/Resturant Around The University</a>
-                    
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              
-            </Card>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Food/Resturant Around The University
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {/* <a href="./FoodBlog">Food/Resturant Around The University</a> */}
+                      {/* <Link to="/FoodBlog"component={isLogin}>Food/Resturant Around The University</Link> */}
+                      <Link to="/FoodBlog">Food/Resturant Around The University</Link>
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image="https://media.wired.com/photos/5c9040ee4950d24718d6da99/1:1/w_1800,h_1800,c_limit/shoppingcart-1066110386.jpg"
+                    title="Contemplative Reptile"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Shopping/Malls Around The University
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      <Link to="./ShoppingBlog">
+                        Shopping/Malls Around The University
+                      </Link>
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image="https://cdn.vox-cdn.com/thumbor/ADYxDCTUKewcGxhYGZ_XMUh4uzQ=/0x0:2040x1360/1200x675/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/64035800/acastro_190618_1777_cloud_gaming_0003.0.jpg"
+                    title="Contemplative Reptile"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Gaming And News
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      <Link to="./GameBlog">Gaming And News </Link>
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
           </Grid>
 
-
-
-
-          <Grid item xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.media}
-                  image="https://media.wired.com/photos/5c9040ee4950d24718d6da99/1:1/w_1800,h_1800,c_limit/shoppingcart-1066110386.jpg"
-                  title="Contemplative Reptile"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Shopping/Malls Around The University
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-
-                    <a href="./ShoppingBlog">Shopping/Malls Around The University</a>
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              
-            </Card>
-          </Grid>
-
-
-
-          <Grid item xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.media}
-                  image="https://cdn.vox-cdn.com/thumbor/ADYxDCTUKewcGxhYGZ_XMUh4uzQ=/0x0:2040x1360/1200x675/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/64035800/acastro_190618_1777_cloud_gaming_0003.0.jpg"
-                  title="Contemplative Reptile"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                   Gaming And News  
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                  <a href="./GameBlog">Gaming And News </a>
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              
-            </Card>
-          </Grid>
-
-
-          </Grid>
-
-        
-
-        <Typography  >
-          It’s a digital world and with this degree, you will have the flexibility to chart your own career path in almost any industry. 
-          We offer hands-on learning opportunities and support as you learn computer languages, operation systems, and the mathematics behind 
-          computation. University degree holders from another subject area can fast track through this program. This excellent career prep has 
-          helped all of our grads find jobs in their chosen fields within two years. UWindsor Computer Science program is tied for first in Ontario 
-          university employment rates.
-
-          Sample Courses:Introduction to Algorithms and Programming, System Programming, Computer Architecture I: Digital Design, Database Management
-          Systems, Web Information Systems Development
-
-          Career Tracks: Web developer, software developer, computer programmer, IT manager, video game developer, graduate studies.
-
-        </Typography>
-
-        
-      
-
-
-      </Container>
-      
-        </div>
-
-      
-    )
+          <Typography>
+            It’s a digital world and with this degree, you will have the
+            flexibility to chart your own career path in almost any industry. We
+            offer hands-on learning opportunities and support as you learn
+            computer languages, operation systems, and the mathematics behind
+            computation. University degree holders from another subject area can
+            fast track through this program. This excellent career prep has
+            helped all of our grads find jobs in their chosen fields within two
+            years. UWindsor Computer Science program is tied for first in
+            Ontario university employment rates. Sample Courses:Introduction to
+            Algorithms and Programming, System Programming, Computer
+            Architecture I: Digital Design, Database Management Systems, Web
+            Information Systems Development Career Tracks: Web developer,
+            software developer, computer programmer, IT manager, video game
+            developer, graduate studies.
+          </Typography>
+        </Container>
+      </div>
+    );
 }
 
 

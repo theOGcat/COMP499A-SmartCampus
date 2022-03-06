@@ -1,8 +1,8 @@
 import React from 'react';
 import CommentBox from '../BlogPages/comment-box';
 
-
-
+import styled from "styled-components";
+import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -13,7 +13,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
-
+import axois from 'axios';
 
 
 
@@ -63,10 +63,28 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-function Blogpage3() {
+function Blogpage3({isLogin}) {
 
-    const classes = useStyles();
+  const classes = useStyles();
+  //const [isLogin, setLogin] = useState(false)
+  const [userID, setuserID] = useState('')
+  const [content, setcontent] = useState('')
 
+
+  // useEffect(() => {
+  //   handleSignIn(isLogin); // pass info back to parent
+  // }, [isLogin]);
+  
+  console.log("Game Blog isloggedin: " + isLogin)
+  const Button = styled.button`
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+`;
 
     return (
         <div className='home-Container'>
@@ -467,7 +485,28 @@ function Blogpage3() {
 
 
 
-        <CommentBox apiUrl="api/blog/comments.json" />
+        {isLogin &&<>
+          
+          <Typography component="h1" variant="h5" align="center">
+              You are Logged in as {userID}
+          </Typography>
+          <CommentBox apiUrl="api/blog/comments.json" />
+          
+        </>
+        }
+
+        
+        {isLogin === false && <>
+          <Typography component="h1" variant="h5" align="center" >
+              You are Not Signed In, Please Sign in to see the comment.
+          </Typography>
+          <a href="/SignIn" target="_blank">
+          <Button> Sign In </Button>
+          </a>
+          
+          </>
+        }
+
 
       </Container>
       

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import CommentBox from '../BlogPages/comment-box';
 
 import styled from "styled-components";
@@ -70,14 +70,19 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-function Blogpage() {
+function Blogpage({isLogin}) {
 
     const classes = useStyles();
-    const [isLogin, setLogin] = useState(false)
+    //const [isLogin, setLogin] = useState(false)
     const [userID, setuserID] = useState('')
     const [content, setcontent] = useState('')
+
+
+    // useEffect(() => {
+    //   handleSignIn(isLogin); // pass info back to parent
+    // }, [isLogin]);
     
-    
+    console.log("Food Blog isloggedin: " + isLogin)
     const Button = styled.button`
     background-color: black;
     color: white;
@@ -471,7 +476,7 @@ function Blogpage() {
           <Typography component="h1" variant="h5" align="center" >
               You are Not Signed In, Please Sign in to see the comment.
           </Typography>
-          <a href="/SignInPage" target="_blank">
+          <a href="/SignIn" target="_blank">
           <Button> Sign In </Button>
           </a>
           
