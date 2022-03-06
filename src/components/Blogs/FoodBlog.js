@@ -2,7 +2,7 @@ import React from 'react';
 import CommentBox from '../BlogPages/comment-box';
 
 
-
+import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -13,7 +13,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
-
+import axois from 'axios';
 
 
 
@@ -66,6 +66,12 @@ const useStyles = makeStyles((theme) => ({
 function Blogpage() {
 
     const classes = useStyles();
+    const [isLogin, setLogin] = useState(false)
+
+
+    
+    
+
 
 
     return (
@@ -434,9 +440,9 @@ function Blogpage() {
 
 
 
-
+        {isLogin === false &&
         <CommentBox apiUrl="api/blog/comments.json" />
-
+        }
       </Container>
       
         </div>

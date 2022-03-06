@@ -22,10 +22,11 @@ export default class CommentForm extends React.Component {
     return (
         //onSubmit call _handleSubmit
         <form className="comment-form" onSubmit={this._handleSubmit}>
+          <label>Welcome User...</label>
           <label>New comment</label>
           <div className="comment-form-fields">
             {/* refs allow us to access input data from submit handler. React calls the ref function when it renders the component */}
-            <input placeholder="Name:" ref={input => this._author = input}/>
+            
             <textarea placeholder="Comment:" ref={textarea => this._body = textarea} onChange={this._getCharacterCount}></textarea>
           </div>
           <p>{this.state.characters} characters</p>
