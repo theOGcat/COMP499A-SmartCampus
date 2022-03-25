@@ -35,15 +35,21 @@ function Copyright(props) {
   
   const theme = createTheme();
   
-  export default function SignIn({handleSignIn}) {
+  export default function SignIn({ handleSignIn, updateUserID, updateFirstName, updateLastName, updateJWT}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isValidated, setValidation] = useState(true);
     const [isLogin, setLogin] = useState(false);
-
+    const [userID, setUserID] = useState(null);
+    
+    
     useEffect(() => {
       handleSignIn(isLogin); // pass info back to parent
     }, [isLogin]);
+
+    useEffect(() => {
+      updateUserID(userID);
+    }, [userID]);
 
     const navigate = useNavigate();
     const handleSubmit = async (event) => {
@@ -65,7 +71,14 @@ function Copyright(props) {
           Password: customerPassword,
         });
         //setLogin(true)
-        console.log(res);
+        console.log(res.data);
+
+        setUserID(res.data.user.UserId);
+
+        updateFirstName(res.data.user.FirstName)
+        updateLastName(res.data.user.LastName)
+        window.localStorage.setItem("token", res.data.token)
+        updateJWT(res.data.token)
         // if(res.status === 200){
         //   navigate('/Homepage')
         // }

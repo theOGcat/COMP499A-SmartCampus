@@ -122,7 +122,7 @@ function BlogHomeContent(isLogin) {
                       color="textSecondary"
                       component="p"
                     >
-                      <Link to="./ShoppingBlog">
+                      <Link to="/ShoppingBlog">
                         Shopping/Malls Around The University
                       </Link>
                     </Typography>
@@ -148,7 +148,7 @@ function BlogHomeContent(isLogin) {
                       color="textSecondary"
                       component="p"
                     >
-                      <Link to="./GameBlog">Gaming And News </Link>
+                      <Link to="/GameBlog">Gaming And News </Link>
                     </Typography>
                   </CardContent>
                 </CardActionArea>

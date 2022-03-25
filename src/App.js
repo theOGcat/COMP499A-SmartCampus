@@ -17,12 +17,29 @@ import Course from './components/pages/Course';
 
 
 function App(){
-
-  const [isLogin, setLogin] = useState(false)
   
+  /**
+   * TODO
+   * 1. make an axios request to validate token
+   * 
+   */
+  const [token, setToken] = useState(window.localStorage.getItem("token"))
+  const [isLogin, setLogin] = useState(false)
+  const [userID, setUserID] = useState(null)
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+
+  
+  
+
+
+  console.log(token)
   useEffect(()=> {
     console.log(isLogin)
-  })
+    console.log("userID: " + userID)
+  }, [isLogin, userID])
+
+
 
   return(
     <>
@@ -32,12 +49,24 @@ function App(){
           <Route path ='/Homepage' element={<Homepage/>}/>
           <Route path ='/About' element={<About/>}/>
           <Route path ='/Course' element={<Course/>}/>
-          <Route path ='/SignIn' element={<SignIn handleSignIn={setLogin}/>}/>
+          <Route 
+            path ='/SignIn' 
+            element={
+            <SignIn 
+              handleSignIn={setLogin} 
+              updateUserID={setUserID} 
+              updateFirstName={setFirstName} 
+              updateLastName={setLastName}
+              updateJWT={setToken}
+            />}
+          
+          
+          />
           <Route path ='/SignUpPage' element={<SignUpPage/>}/>
           <Route path ='/BlogHomePage' element={<BlogHomePage isLogin={isLogin}/>}/>
-          <Route path ='/FoodBlog' element={<FoodBlog isLogin={isLogin}/>}/>
-          <Route path ='/ShoppingBlog' element={<ShoppingBlog isLogin={isLogin}/>}/>
-          <Route path ='/GameBlog' element={<GameBlog isLogin={isLogin}/>}/>
+          <Route path ='/FoodBlog' element={<FoodBlog isLogin={isLogin} userID={userID} firstName={firstName} lastName={lastName}  />}/>
+          <Route path ='/ShoppingBlog' element={<ShoppingBlog isLogin={isLogin} userID={userID} firstName={firstName} lastName={lastName}/>}/>
+          <Route path ='/GameBlog' element={<GameBlog isLogin={isLogin} userID={userID} firstName={firstName} lastName={lastName}/>}/>
           <Route exact path="/" element={<Navigate to ='/Homepage' replace />}/>  
           
           </Routes>

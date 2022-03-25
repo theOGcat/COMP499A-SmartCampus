@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentBox from '../BlogPages/comment-box';
+
 
 import styled from "styled-components";
 import { useState } from 'react';
@@ -14,6 +14,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import axois from 'axios';
+import UserComment from '../Comment/UserComment';
 
 
 
@@ -63,12 +64,10 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-function Blogpage3({isLogin}) {
+function Blogpage3({isLogin, userID, firstName, lastName}) {
 
   const classes = useStyles();
-  //const [isLogin, setLogin] = useState(false)
-  const [userID, setuserID] = useState('')
-  const [content, setcontent] = useState('')
+ 
 
 
   // useEffect(() => {
@@ -488,9 +487,9 @@ function Blogpage3({isLogin}) {
         {isLogin &&<>
           
           <Typography component="h1" variant="h5" align="center">
-              You are Logged in as {userID}
+          You are Logged in as {userID + " " + firstName + " " + lastName}
           </Typography>
-          <CommentBox apiUrl="api/blog/comments.json" />
+          <UserComment pageNum={3} firstName={firstName} lastName={lastName} userID={userID} />
           
         </>
         }
