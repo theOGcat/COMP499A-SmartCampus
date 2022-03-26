@@ -77,6 +77,12 @@ function Copyright(props) {
 
         updateFirstName(res.data.user.FirstName)
         updateLastName(res.data.user.LastName)
+        //
+        window.localStorage.setItem("userID",res.data.user.UserId)
+        window.localStorage.setItem("firstName",res.data.user.FirstName)
+        window.localStorage.setItem("lastName",res.data.user.LastName)
+
+
         window.localStorage.setItem("token", res.data.token)
         updateJWT(res.data.token)
         // if(res.status === 200){

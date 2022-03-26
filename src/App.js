@@ -14,6 +14,7 @@ import GameBlog from './components/Blogs/GameBlog';
 import BlogHomePage from './components/BlogHomePage';
 
 import Course from './components/pages/Course';
+import axios from 'axios';
 
 
 function App(){
@@ -25,13 +26,25 @@ function App(){
    */
   const [token, setToken] = useState(window.localStorage.getItem("token"))
   const [isLogin, setLogin] = useState(false)
-  const [userID, setUserID] = useState(null)
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
+  const [userID, setUserID] = useState(window.localStorage.getItem("userID"))
+  const [firstName, setFirstName] = useState(window.localStorage.getItem("firstName"))
+  const [lastName, setLastName] = useState(window.localStorage.getItem("lastName"))
 
+  useEffect(async ()=> {
+    const res = await axios.get("http://localhost:3001/", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    console.log(res.status)
+    if(res.status == 401){
+      alert("Session has been expired")
+    }
+    else{
+      setLogin(true);
+    }
+  });
   
-  
-
 
   console.log(token)
   useEffect(()=> {
