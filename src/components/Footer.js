@@ -25,9 +25,7 @@ const Footer = () => (
   	 		<div class="footer-col">
   	 			<h4>Account</h4>
   	 			<ul>
-  	 				<li><a href="/SignInPage">Manage Account</a></li>
-  	 			
-  	 				
+  	 				<li><a href="https://www.uwindsor.ca/current-students">Manage Account</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
