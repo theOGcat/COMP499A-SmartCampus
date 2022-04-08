@@ -37,7 +37,7 @@ function Copyright(props) {
     const [email, setEmail] = useState('')
     const [lastName, setLastName] = useState('')
     const [password, setPassword] = useState('')
-    const [isValidated, setValidation] = useState(true)
+    const [isValidated, setValidation] = useState(false)
 
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -88,9 +88,13 @@ function Copyright(props) {
             >
             
             {/* if user input is invalid, show alert message on the screen */}
-              { !isValidated && 
+              { !isValidated && (
                 <Alert severity="error">Please Complete the Form</Alert>
-              }
+              )}
+              { isValidated === true && (
+                <Alert severity="success">You have Successful SignUp</Alert>
+              )}
+             
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
