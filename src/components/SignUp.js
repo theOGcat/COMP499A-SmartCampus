@@ -61,6 +61,7 @@ function Copyright(props) {
           password: customerPassword,
         });
         console.log(res);
+        setValidation(false)
       }  
     };
 
@@ -93,6 +94,7 @@ function Copyright(props) {
               )}
               { isValidated === true && (
                 <Alert severity="success">You have Successful SignUp</Alert>
+                
               )}
              
               <Grid container spacing={2}>
