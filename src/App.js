@@ -73,7 +73,6 @@ function App(){
               updateJWT={setToken}
             />}
           
-          
           />
           <Route path ='/SignUpPage' element={<SignUpPage/>}/>
           <Route path ='/BlogHomePage' element={<BlogHomePage isLogin={isLogin}/>}/>

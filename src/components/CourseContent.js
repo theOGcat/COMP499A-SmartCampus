@@ -14,7 +14,6 @@ const columns = [
       editable: true,
       width: 200,
     },
-
     {
       field: 'CourseName',
       headerName: 'Course Name',
@@ -63,7 +62,6 @@ const columns = [
     
     {id: 1, courseNum:'COMP3400', CourseName:'Object-Oriented Programming', Fall:'Close', Summer:'Open', Winter:'Open', Instructor:'Paul Preney', Prereq:'COMP1400'},
     {id: 2, courseNum:'COMP1400', CourseName:'Programming Language using C', Fall:'Open', Summer:'Open', Winter:'Close', Instructor:'Saead Samet', Prereq:'None'},
-    
   ];
 */
 class CourseContent extends Component { 

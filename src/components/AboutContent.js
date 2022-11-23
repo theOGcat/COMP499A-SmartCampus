@@ -44,17 +44,7 @@ function AboutContent() {
     title="SmartCampus- A better Experience in campus"
     subTitle="Created by COMP499 Group Supervised By Xiaobu Yuan Instructor"
     />
-{/*
-<Paragraph style={{fontSize:20}}>
-      Ant Design interprets the color system into two levels: a system-level color system and a
-      product-level color system.
-    </Paragraph>
-    <Paragraph style={{fontSize:20}}>
-      Ant Design&#x27;s design team preferred to design with the HSB color model, which makes it
-      easier for designers to have a clear psychological expectation of color when adjusting colors,
-      as well as facilitate communication in teams.
-    </Paragraph>
-   */} 
+
 
 <div className='paragraph' style={{textAlign: "center", paddingBottom:400, fontSize:20}}>
     
@@ -126,6 +116,8 @@ You can also reach any of us individually on the Discord server or our email add
 </Paragraph>
 <text>Stay Safe.</text>
 <Divider/>
+
+
 </div>
 </div>
     
